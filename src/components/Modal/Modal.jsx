@@ -38,7 +38,7 @@ export class Modal extends Component {
         console.log(this.props.data)
         return createPortal(<Overlay onClick={this.handleBackdropClick}>
             <ModalWindow>
-                <img src={this.props.data} width="100%" />
+                <img src={this.props.data} width="100%" alt="" />
             </ModalWindow>
         </Overlay>, modalRoot)
         

@@ -1,4 +1,4 @@
-import { fetchImagesByString } from "components/api";
+
 import React from "react";
 import { Component } from "react";
 import { GalleryList } from "./ImageGallery.styled";

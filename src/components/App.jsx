@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ToastContainer, toast } from 'react-toastify';
+
   
 import { fetchImagesByString } from "./api";
 import { Button } from "./Button/Button";
@@ -115,7 +115,7 @@ state = {
       //   color: '#010101'
       // }}
       >
-        <ToastContainer />
+       
         
         {this.state.showModal === true && <Modal data={this.state.clickedImageUrl} onClose={this.onModalOpenToggle} />}
         
