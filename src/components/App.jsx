@@ -6,9 +6,10 @@ import { Button } from "./Button/Button";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { SearchBar } from "./SearchBar/SearchBar";
 
-import { Circles } from  'react-loader-spinner'
+
 
 import { Modal } from "./Modal/Modal";
+import { Loader } from "./Loader/Loader";
 
 
 export class App extends Component {
@@ -125,15 +126,7 @@ state = {
         
         {this.state.images.length > 0 && <Button onClick={this.loadMore} />}
         
-        {this.state.isLoading === true && <Circles
-  height="200"
-  width="200"
-  color="black"
-  ariaLabel="circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>}
+        {this.state.isLoading === true && <Loader/>}
     </div>
   );
 };

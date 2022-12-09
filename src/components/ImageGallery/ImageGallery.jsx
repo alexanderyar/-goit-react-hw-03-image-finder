@@ -4,6 +4,8 @@ import { Component } from "react";
 import { GalleryList } from "./ImageGallery.styled";
 import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem";
 
+import PropTypes from 'prop-types'
+
 
 // list of images
 export class ImageGallery extends Component  {
@@ -38,4 +40,17 @@ export class ImageGallery extends Component  {
         <ImageGalleryItem data={this.props.images} onImageClick={this.props.onImageClick} />
         </GalleryList> )
     }
+}
+
+
+//added prop-types
+ImageGallery.propTypes = {
+    images: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            tags: PropTypes.string,
+            webformatURL: PropTypes.string.isRequired,
+            largeImageURL: PropTypes.string.isRequired
+        })),
+     onImageClick: PropTypes.func
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { ListItem, ListItemImage } from "./ImageGalleryItem.styled";
 
+import PropTypes from 'prop-types'
+
+
 export const ImageGalleryItem = ({ data, onImageClick }) => {
     return (
         
@@ -16,4 +19,17 @@ export const ImageGalleryItem = ({ data, onImageClick }) => {
        
         })
     )
+}
+
+
+//added prop-types
+ImageGalleryItem.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            tags: PropTypes.string,
+            webformatURL: PropTypes.string.isRequired,
+            largeImageURL: PropTypes.string.isRequired
+        })),
+     onImageClick: PropTypes.func.isRequired
 }

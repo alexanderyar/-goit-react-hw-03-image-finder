@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Overlay, ModalWindow } from "./Modal.styled";
 import { createPortal } from "react-dom";
 
+import PropTypes from 'prop-types'
+
 //creating var for portal for modal to avoid z-index troubles
 const modalRoot = document.querySelector('#modal-root')
 
@@ -45,3 +47,9 @@ export class Modal extends Component {
     }
 }
 
+
+// added prop-types
+Modal.propTypes = {
+    data: PropTypes.string,
+    onClose: PropTypes.func
+}
